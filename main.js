@@ -996,8 +996,8 @@ const vm = new Vue({
       if (this.translation.api == "") return;
       if (!from || !to || (from == to)) return;
 
-      const source = from == "ja-JP" ? "ja" : "en";
-      const target = to   == "ja-JP" ? "ja" : "en";
+      const source = from == "ja-JP" ? "ja" : "zh-cn";
+      const target = to   == "ja-JP" ? "ja" : "zh-cn";
       const query = `${this.translation.api}?text=${message.text}&source=${source}&target=${target}`
 
       dtr('translate_message', query)
