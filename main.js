@@ -1018,9 +1018,9 @@ const vm = new Vue({
       const query32 = `${this.translation.api}?text=${message.text}&source=${source3}&target=${target2}`
       const query34 = `${this.translation.api}?text=${message.text}&source=${source3}&target=${target4}`
 
-      const query41 = `${this.translation.api}?text=${message.text}&source=${source3}&target=${target1}`
-      const query42 = `${this.translation.api}?text=${message.text}&source=${source3}&target=${target2}`
-      const query43 = `${this.translation.api}?text=${message.text}&source=${source3}&target=${target3}`
+      const query41 = `${this.translation.api}?text=${message.text}&source=${source4}&target=${target1}`
+      const query42 = `${this.translation.api}?text=${message.text}&source=${source4}&target=${target2}`
+      const query43 = `${this.translation.api}?text=${message.text}&source=${source4}&target=${target3}`
 
       dtr('translate_message12', query12)
       dtr('translate_message13', query13)
