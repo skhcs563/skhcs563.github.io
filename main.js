@@ -999,12 +999,12 @@ const vm = new Vue({
       const source1 = from == "ja-JP" ? "ja" : null;
       const source2 = from == "en-US" ? "en" : null;
       const source3 = from == "zh-CN" ? "zh-cn" : null;
-      const source4 = from == "th" ? "th" : null;
+      const source4 = from == "th-TH" ? "th" : null;
 
       const target1 = to   == "ja-JP" ? "ja" : null;
       const target2 = to   == "en-US" ? "en" : null;
       const target3 = to   == "zh-CN" ? "zh-cn" : null;
-      const target4 = to   == "th" ? "th" : null;
+      const target4 = to   == "th-TH" ? "th" : null;
 
       const query12 = `${this.translation.api}?text=${message.text}&source=${source1}&target=${target2}`
       const query13 = `${this.translation.api}?text=${message.text}&source=${source1}&target=${target3}`
@@ -1158,7 +1158,7 @@ const vm = new Vue({
           this.speech_message(message_translate32);
         }).catch(error => dtr('translate_message32', error))
 
-      fetch(query33)
+      fetch(query34)
         .then(response33 => {
           dtr('translate_message33', response33)
           return response33.text()
