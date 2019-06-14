@@ -1059,7 +1059,7 @@ const vm = new Vue({
           return response13.text()
         }).then(text13 => {
           dtr('translate_message13', text13)
-          const message_translate = {
+          const message_translate13 = {
             text: text13,
             lang: to,
             translate: true
@@ -1074,7 +1074,7 @@ const vm = new Vue({
           return response14.text()
         }).then(text14 => {
           dtr('translate_message14', text14)
-          const message_translate = {
+          const message_translate14 = {
             text: text14,
             lang: to,
             translate: true
@@ -1089,7 +1089,7 @@ const vm = new Vue({
           return response21.text()
         }).then(text21 => {
           dtr('translate_message21', text21)
-          const message_translate = {
+          const message_translate21 = {
             text: text21,
             lang: to,
             translate: true
@@ -1104,7 +1104,7 @@ const vm = new Vue({
           return response23.text()
         }).then(text23 => {
           dtr('translate_message23', text23)
-          const message_translate = {
+          const message_translate23 = {
             text: text23,
             lang: to,
             translate: true
@@ -1119,7 +1119,7 @@ const vm = new Vue({
           return response24.text()
         }).then(text24 => {
           dtr('translate_message24', text24)
-          const message_translate = {
+          const message_translate24 = {
             text: text24,
             lang: to,
             translate: true
@@ -1134,7 +1134,7 @@ const vm = new Vue({
           return response31.text()
         }).then(text31 => {
           dtr('translate_message31', text31)
-          const message_translate = {
+          const message_translate31 = {
             text: text31,
             lang: to,
             translate: true
@@ -1149,7 +1149,7 @@ const vm = new Vue({
           return response32.text()
         }).then(text32 => {
           dtr('translate_message32', text32)
-          const message_translate = {
+          const message_translate32 = {
             text: text32,
             lang: to,
             translate: true
@@ -1159,19 +1159,19 @@ const vm = new Vue({
         }).catch(error => dtr('translate_message32', error))
 
       fetch(query34)
-        .then(response33 => {
-          dtr('translate_message33', response33)
-          return response33.text()
-        }).then(text33 => {
-          dtr('translate_message33', text33)
-          const message_translate = {
-            text: text33,
+        .then(response34 => {
+          dtr('translate_message34', response34)
+          return response34.text()
+        }).then(text34 => {
+          dtr('translate_message34', text34)
+          const message_translate34 = {
+            text: text34,
             lang: to,
             translate: true
           }
-          this.add_message(message_translate33);
-          this.speech_message(message_translate33);
-        }).catch(error => dtr('translate_message33', error))
+          this.add_message(message_translate34);
+          this.speech_message(message_translate34);
+        }).catch(error => dtr('translate_message34', error))
 
       fetch(query41)
         .then(response41 => {
@@ -1179,7 +1179,7 @@ const vm = new Vue({
           return response41.text()
         }).then(text41 => {
           dtr('translate_message41', text41)
-          const message_translate = {
+          const message_translate41 = {
             text: text41,
             lang: to,
             translate: true
@@ -1194,7 +1194,7 @@ const vm = new Vue({
           return response42.text()
         }).then(text42 => {
           dtr('translate_message42', text42)
-          const message_translate = {
+          const message_translate42 = {
             text: text42,
             lang: to,
             translate: true
@@ -1209,7 +1209,7 @@ const vm = new Vue({
           return response43.text()
         }).then(text43 => {
           dtr('translate_message43', text43)
-          const message_translate = {
+          const message_translate43 = {
             text: text43,
             lang: to,
             translate: true
