@@ -999,7 +999,7 @@ const vm = new Vue({
       const source1 = from == "ja-JP" ? "ja" : null;
       const source2 = from == "en-US" ? "en" : null;
       const source3 = from == "zh-CN" ? "zh-cn" : null;
-      const source4 = from == "th" ? "th : null";
+      const source4 = from == "th" ? "th" : null;
 
       const target1 = to   == "ja-JP" ? "ja" : null;
       const target2 = to   == "en-US" ? "en" : null;
