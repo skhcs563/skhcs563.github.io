@@ -377,7 +377,7 @@ const vm = new Vue({
             //   // this.speech_message(this.transcription.message);
             // }
             if (this.debug.self_translation) {
-              this.translate_message(this.transcription.message, this.feature.lang, this.feature.lang == "ja-JP" ? "zh-CN" : "ja-JP");
+              this.translate_message(this.transcription.message, this.feature.lang, this.feature.lang == "ja-JP" ? "en-US" : "ja-JP");
             }
             this.transcription.message = null;
           }
@@ -996,26 +996,227 @@ const vm = new Vue({
       if (this.translation.api == "") return;
       if (!from || !to || (from == to)) return;
 
-      const source = from == "ja-JP" ? "ja" : "zh-cn";
-      const target = to   == "ja-JP" ? "ja" : "zh-cn";
-      const query = `${this.translation.api}?text=${message.text}&source=${source}&target=${target}`
+      const source1 = from == "ja-JP" ? "ja";
+      const source2 = from == "en-US" ? "en";
+      const source3 = from == "zh-CN" ? "zh-cn";
+      const source4 = from == "th" ? "th";
 
-      dtr('translate_message', query)
+      const target1 = to   == "ja-JP" ? "ja";
+      const target2 = to   == "en-US" ? "en";
+      const target3 = to   == "zh-CN" ? "zh-cn";
+      const target4 = to   == "th" ? "th";
 
-      fetch(query)
-        .then(response => {
-          dtr('translate_message', response)
-          return response.text()
-        }).then(text => {
-          dtr('translate_message', text)
-          const message_translate = {
-            text: text,
+      const query12 = `${this.translation.api}?text=${message.text}&source=${source1}&target=${target2}`
+      const query13 = `${this.translation.api}?text=${message.text}&source=${source1}&target=${target3}`
+      const query14 = `${this.translation.api}?text=${message.text}&source=${source1}&target=${target4}`
+
+      const query21 = `${this.translation.api}?text=${message.text}&source=${source2}&target=${target1}`
+      const query23 = `${this.translation.api}?text=${message.text}&source=${source2}&target=${target3}`
+      const query24 = `${this.translation.api}?text=${message.text}&source=${source2}&target=${target4}`
+
+      const query31 = `${this.translation.api}?text=${message.text}&source=${source3}&target=${target1}`
+      const query32 = `${this.translation.api}?text=${message.text}&source=${source3}&target=${target2}`
+      const query34 = `${this.translation.api}?text=${message.text}&source=${source3}&target=${target4}`
+
+      const query41 = `${this.translation.api}?text=${message.text}&source=${source3}&target=${target1}`
+      const query42 = `${this.translation.api}?text=${message.text}&source=${source3}&target=${target2}`
+      const query43 = `${this.translation.api}?text=${message.text}&source=${source3}&target=${target3}`
+
+      dtr('translate_message12', query12)
+      dtr('translate_message13', query13)
+      dtr('translate_message14', query14)
+
+      dtr('translate_message21', query21)
+      dtr('translate_message23', query23)
+      dtr('translate_message24', query24)
+
+      dtr('translate_message31', query31)
+      dtr('translate_message32', query32)
+      dtr('translate_message34', query34)
+
+      dtr('translate_message41', query41)
+      dtr('translate_message42', query42)
+      dtr('translate_message43', query43)
+
+      fetch(query12)
+        .then(response12 => {
+          dtr('translate_message12', response12)
+          return response12.text()
+        }).then(text12 => {
+          dtr('translate_message12', text12)
+          const message_translate12 = {
+            text: text12,
             lang: to,
             translate: true
           }
-          this.add_message(message_translate);
-          this.speech_message(message_translate);
-        }).catch(error => dtr('translate_message', error))
+          this.add_message(message_translate12);
+          this.speech_message(message_translate12);
+        }).catch(error => dtr('translate_message12', error))
+
+      fetch(query13)
+        .then(response13 => {
+          dtr('translate_message13', response13)
+          return response13.text()
+        }).then(text13 => {
+          dtr('translate_message13', text13)
+          const message_translate = {
+            text: text13,
+            lang: to,
+            translate: true
+          }
+          this.add_message(message_translate13);
+          this.speech_message(message_translate13);
+        }).catch(error => dtr('translate_message13', error))
+
+      fetch(query14)
+        .then(response14 => {
+          dtr('translate_message14', response14)
+          return response14.text()
+        }).then(text14 => {
+          dtr('translate_message14', text14)
+          const message_translate = {
+            text: text14,
+            lang: to,
+            translate: true
+          }
+          this.add_message(message_translate14);
+          this.speech_message(message_translate14);
+        }).catch(error => dtr('translate_message14', error))
+
+      fetch(query21)
+        .then(response21 => {
+          dtr('translate_message21', response21)
+          return response21.text()
+        }).then(text21 => {
+          dtr('translate_message21', text21)
+          const message_translate = {
+            text: text21,
+            lang: to,
+            translate: true
+          }
+          this.add_message(message_translate21);
+          this.speech_message(message_translate21);
+        }).catch(error => dtr('translate_message21', error))
+
+      fetch(query23)
+        .then(response23 => {
+          dtr('translate_message23', response23)
+          return response23.text()
+        }).then(text23 => {
+          dtr('translate_message23', text23)
+          const message_translate = {
+            text: text23,
+            lang: to,
+            translate: true
+          }
+          this.add_message(message_translate23);
+          this.speech_message(message_translate23);
+        }).catch(error => dtr('translate_message23', error))
+
+      fetch(query24)
+        .then(response24 => {
+          dtr('translate_message24', response24)
+          return response24.text()
+        }).then(text24 => {
+          dtr('translate_message24', text24)
+          const message_translate = {
+            text: text24,
+            lang: to,
+            translate: true
+          }
+          this.add_message(message_translate24);
+          this.speech_message(message_translate24);
+        }).catch(error => dtr('translate_message24', error))
+
+      fetch(query31)
+        .then(response31 => {
+          dtr('translate_message31', response31)
+          return response31.text()
+        }).then(text31 => {
+          dtr('translate_message31', text31)
+          const message_translate = {
+            text: text31,
+            lang: to,
+            translate: true
+          }
+          this.add_message(message_translate31);
+          this.speech_message(message_translate31);
+        }).catch(error => dtr('translate_message31', error))
+
+      fetch(query32)
+        .then(response32 => {
+          dtr('translate_message32', response32)
+          return response32.text()
+        }).then(text32 => {
+          dtr('translate_message32', text32)
+          const message_translate = {
+            text: text32,
+            lang: to,
+            translate: true
+          }
+          this.add_message(message_translate32);
+          this.speech_message(message_translate32);
+        }).catch(error => dtr('translate_message32', error))
+
+      fetch(query33)
+        .then(response33 => {
+          dtr('translate_message33', response33)
+          return response33.text()
+        }).then(text33 => {
+          dtr('translate_message33', text33)
+          const message_translate = {
+            text: text33,
+            lang: to,
+            translate: true
+          }
+          this.add_message(message_translate33);
+          this.speech_message(message_translate33);
+        }).catch(error => dtr('translate_message33', error))
+
+      fetch(query41)
+        .then(response41 => {
+          dtr('translate_message41', response41)
+          return response41.text()
+        }).then(text41 => {
+          dtr('translate_message41', text41)
+          const message_translate = {
+            text: text41,
+            lang: to,
+            translate: true
+          }
+          this.add_message(message_translate41);
+          this.speech_message(message_translate41);
+        }).catch(error => dtr('translate_message41', error))
+
+      fetch(query42)
+        .then(response42 => {
+          dtr('translate_message42', response42)
+          return response42.text()
+        }).then(text42 => {
+          dtr('translate_message42', text42)
+          const message_translate = {
+            text: text42,
+            lang: to,
+            translate: true
+          }
+          this.add_message(message_translate42);
+          this.speech_message(message_translate42);
+        }).catch(error => dtr('translate_message42', error))
+
+      fetch(query43)
+        .then(response43 => {
+          dtr('translate_message43', response43)
+          return response43.text()
+        }).then(text43 => {
+          dtr('translate_message43', text43)
+          const message_translate = {
+            text: text43,
+            lang: to,
+            translate: true
+          }
+          this.add_message(message_translate43);
+          this.speech_message(message_translate43);
+        }).catch(error => dtr('translate_message43', error))
     }
   },
   computed: {
