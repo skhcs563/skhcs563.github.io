@@ -377,7 +377,7 @@ const vm = new Vue({
             //   // this.speech_message(this.transcription.message);
             // }
             if (this.debug.self_translation) {
-              this.translate_message(this.transcription.message, this.feature.lang, this.feature.lang == "ja-JP" ? "en-US" ? "zh-CN" ? "th" : "ja-JP");
+              this.translate_message(this.transcription.message, this.feature.lang, this.feature.lang == "ja-JP" ? "en-US" : "ja-JP");
             }
             this.transcription.message = null;
           }
