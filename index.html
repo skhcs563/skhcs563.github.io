@@ -38,7 +38,7 @@
       }
       .text-container {
         top: 0px;
-        left: 50px;
+        left: 0px;
         position: relative;
         overflow: auto;
         background-color: rgba(100,100,100,0.5);
@@ -164,7 +164,9 @@
               Select Your Language
               <select name="language" v-model="feature.lang" :disabled="!feature.transcription">
                 <option value="ja-JP">Japanese</option>
+                <option value="en-US">English</option>
                 <option value="zh-CN">Chinese</option>
+                <option value="th">Thai</option>
               </select>
               <hr>
               <label for="translation">
