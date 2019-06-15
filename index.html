@@ -143,7 +143,7 @@
             <li class="nav-item dropup">
               <span class="nav-link dropdown-toggle" id="dropdown_share" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">音声認識・翻訳</span>
               <div class="dropdown-menu" aria-labelledby="dropdown_layout">
-                <button type="button" class="dropdown-item" @click="on_select_recognition()">音声認識・翻訳</button>
+                <button type="button" class="dropdown-item" @click="on_select_recognition()">Option</button>
               </div>
             </li>
           </ul>
@@ -174,7 +174,7 @@
               </select>
               <hr>
               <label for="translation">
-                <input type="checkbox" id="translation" v-model="feature.translation" :disabled="translation.api == ''" />Translate Incomming Text
+                <input type="checkbox" checked="checked"id="translation" checked="checked" v-model="feature.translation" :disabled="translation.api == ''" />Translate Incomming Text
               </label>
               <br>
               <label for="speech">
@@ -182,15 +182,15 @@
               </label>
               <br>
               <label for="mute_remote_voice">
-                <input type="checkbox" id="mute_remote_voice" v-model="feature.mute_remote_voice" />Mute Remote Voice
+                <input type="checkbox" id="mute_remote_voice" checked="checked" v-model="feature.mute_remote_voice" />Mute Remote Voice
               </label>
               <hr>
-              <!-- <h5>Debug</h5>
+              <h5>Debug</h5>
               <p>
                 <label for="self_translation">
                   <input type="checkbox" id="self_translation" v-model="debug.self_translation" :disabled="translation.api == ''" />Translate Your Voice
                 </label>
-              </p> -->
+              </p>
             </div>
             <div class="modal-footer">
               <!-- <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button> -->
