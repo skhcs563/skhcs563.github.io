@@ -996,11 +996,13 @@ const vm = new Vue({
       if (this.translation.api == "") return;
       if (!from || !to || (from == to)) return;
 
-      const source = "ja";
-      const target = "en";
+      let source = "ja";
+      let target = "en";
 
       switch( true ) {
          case from == "ja-JP" && to   == "en-US":
+         source = "ja";
+         target = "en";
          break;
 
          case from == "ja-JP" && to   == "zh-CN":
