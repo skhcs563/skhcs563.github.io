@@ -996,65 +996,66 @@ const vm = new Vue({
       if (this.translation.api == "") return;
       if (!from || !to || (from == to)) return;
 
+      const source = ja;
+      const target = en;
+
       switch( true ) {
          case from == "ja-JP" && to   == "en-US":
-         const source = ja;
-         const target = en;
          break;
 
          case from == "ja-JP" && to   == "zh-CN":
-         const source = ja;
-         const target = zh-cn;
+         source = ja;
+         target = zh-cn;
          break;
 
          case from == "ja-JP" && to   == "th-TH":
-         const source = ja;
-         const target = th;
+         source = ja;
+         target = th;
          break;
 
          case from == "en-US" && to   == "ja-JP":
-         const source = en;
-         const target = ja;
+         source = en;
+         target = ja;
          break;
 
          case from == "en-US" && to   == "zh-CN":
-         const source = en;
-         const target = zh-cn;
+         source = en;
+         target = zh-cn;
          break;
 
          case from == "en-US" && to   == "th-TH":
-         const source = en;
-         const target = th;
+         source = en;
+         target = th;
          break;
 
          case from == "zh-CN" && to   == "ja-JP":
-         const source = zh-cn;
-         const target = ja;
+         source = zh-cn;
+         target = ja;
          break;
 
          case from == "zh-CN" && to   == "zh-CN":
-         const source = zh-cn;
-         const target = en;
+         source = zh-cn;
+         target = en;
          break;
 
          case from == "zh-CN" && to   == "th-TH":
-         const source = zh-cn;
-         const target = th;
+         source = zh-cn;
+         target = th;
          break;
 
          case from == "th-TH" && to   == "ja-JP":
-         const source = th;
-         const target = ja;
+         source = th;
+         target = ja;
          break;
 
          case from == "th-TH" && to   == "en-US":
-         const source = th;
-         const target = en;
+         source = th;
+         target = en;
          break;
 
          case from == "th-TH" && to   == "zh-CN":
-         const source = th;
-         const target = zh-cn;
+         source = th;
+         target = zh-cn;
          break;
       }
 
