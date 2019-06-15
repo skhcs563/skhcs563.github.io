@@ -74,11 +74,9 @@
         <div class="text-container" :class="{invisible : !feature.transcription }" v-cloak>
           <p class="text-frame" v-for="message in messages" :class="{other: message.hasOwnProperty('from'), unresolved: message.hasOwnProperty('unresolved') && message.unresolved, translate: message.hasOwnProperty('translate') && message.translate }">{{ message.text }}</p>
         </div>
-        <!-- 
         <div class="video-frame" v-for="user in rendererUsers" :style="user.style">
           <video v-videostream="user.stream" :class="styleCover" @click="on_click_video(user.stream)" autoplay playsinline></video>
         </div>
-        -->
       </div>
       <nav class="navbar fixed-bottom navbar-expand-lg navbar-dark bg-dark">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
