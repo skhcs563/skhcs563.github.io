@@ -744,7 +744,7 @@ const vm = new Vue({
 
       const constraints = { video: false, audio: false };
       if (this.microphone.device.length) constraints.audio = true;
-      if (this.camera.device.length) constraints.video = true;
+      if (this.camera.device.length) constraints.video = false;
 
       // gUM
       this.stream = await navigator.mediaDevices.getUserMedia(constraints).catch(err => {
