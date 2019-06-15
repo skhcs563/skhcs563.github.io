@@ -708,7 +708,7 @@ const vm = new Vue({
           ct.video = fmt;
         }
         else {
-          ct.video = true;
+          ct.video = false;
         }
       }
       if (this.microphone.device && this.microphone.device.length) {
