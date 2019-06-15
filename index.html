@@ -174,7 +174,7 @@
               </select>
               <hr>
               <label for="translation">
-                <input type="checkbox" checked="checked"id="translation" checked="checked" v-model="feature.translation" :disabled="translation.api == ''" />Translate Incomming Text
+                <input type="checkbox" id="translation" v-model="feature.translation" checked="checked" :disabled="translation.api == ''" />Translate Incomming Text
               </label>
               <br>
               <label for="speech">
@@ -182,7 +182,7 @@
               </label>
               <br>
               <label for="mute_remote_voice">
-                <input type="checkbox" id="mute_remote_voice" checked="checked" v-model="feature.mute_remote_voice" />Mute Remote Voice
+                <input type="checkbox" id="mute_remote_voice" v-model="feature.mute_remote_voice" checked="checked" />Mute Remote Voice
               </label>
               <hr>
               <h5>Debug</h5>
