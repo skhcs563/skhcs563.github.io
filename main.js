@@ -1069,7 +1069,8 @@ const vm = new Vue({
         .then(response => {
           dtr('translate_message', response)
           return response.text()
-        }).then(text => {
+        })
+        .then(text => {
           dtr('translate_message', text)
           const message_translate = {
             text: text,
