@@ -389,7 +389,7 @@ const vm = new Vue({
             lang: this.feature.lang,
             unresolved: true
           };
-          this.add_message(this.transcription.message);
+          // this.add_message(this.transcription.message);
         }
       }
       this.transcription.recognizer.onend = () => {
