@@ -958,10 +958,10 @@ const vm = new Vue({
 
       return outbound_stream;
     },
-    // add_message: function (message) {
-    //  dtr('add_message', message)
-    //  this.messages.unshift(message);
-    // },
+    add_message: function (message) {
+     dtr('add_message', message)
+     this.messages.unshift(message);
+    },
     speech_message: function (message) {
       dtr('speech_message', message)
 
