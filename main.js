@@ -852,7 +852,7 @@ const vm = new Vue({
         if (recv_data.command == "speechRecognition") {
           const message = recv_data.data;
           message.from = recv_from;
-          // this.add_message(message);
+          this.add_message(message);
           if (this.feature.translation) {
             this.translate_message(message, message.lang, this.feature.lang);
           }
