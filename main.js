@@ -1035,7 +1035,7 @@ const vm = new Vue({
          target = "ja";
          break;
 
-         case from == "zh-CN" && to   == "zh-CN":
+         case from == "zh-CN" && to   == "en-US":
          source = "zh-cn";
          target = "en";
          break;
